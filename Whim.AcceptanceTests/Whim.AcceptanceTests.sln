@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.Models", "Whim.Models\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.Presentation.Infrastructure", "..\Whim.Presentation.Infrastructure\Whim.Presentation.Infrastructure.csproj", "{E19D8612-35D9-4A34-9BE0-22BDF764048A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.UnitTests", "..\Whim.UnitTests\Whim.UnitTests.csproj", "{0207279E-C214-43F6-9B12-925B92AD6C1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.Features.Storeage", "Whim.Features.Storeage\Whim.Features.Storeage.csproj", "{1BAE892C-21C0-4A80-A09D-60C361507243}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,14 @@ Global
 		{E19D8612-35D9-4A34-9BE0-22BDF764048A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E19D8612-35D9-4A34-9BE0-22BDF764048A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E19D8612-35D9-4A34-9BE0-22BDF764048A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0207279E-C214-43F6-9B12-925B92AD6C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0207279E-C214-43F6-9B12-925B92AD6C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0207279E-C214-43F6-9B12-925B92AD6C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0207279E-C214-43F6-9B12-925B92AD6C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BAE892C-21C0-4A80-A09D-60C361507243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BAE892C-21C0-4A80-A09D-60C361507243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BAE892C-21C0-4A80-A09D-60C361507243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BAE892C-21C0-4A80-A09D-60C361507243}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
