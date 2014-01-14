@@ -66,10 +66,10 @@ namespace Whim.AcceptanceTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("A user to the system")]
-        public virtual void AUserToTheSystem()
+        [NUnit.Framework.DescriptionAttribute("A user is added to the system")]
+        public virtual void AUserIsAddedToTheSystem()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A user to the system", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A user is added to the system", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
@@ -80,6 +80,25 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I enter the user into the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then("the user is created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("A username is automaticly defined when they are added to the system")]
+        public virtual void AUsernameIsAutomaticlyDefinedWhenTheyAreAddedToTheSystem()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A username is automaticly defined when they are added to the system", ((string[])(null)));
+#line 12
+this.ScenarioSetup(scenarioInfo);
+#line 13
+    testRunner.Given("I have a user with first name of \"Jack\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 14
+    testRunner.And("I have a user with the last name of \"Blood\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+    testRunner.When("I enter the user into the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+    testRunner.Then("they have the username of \"jblood\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
