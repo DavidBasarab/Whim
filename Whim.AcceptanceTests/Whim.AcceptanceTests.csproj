@@ -53,14 +53,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HookUp.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\UserManagement.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserManagement.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\HookUpSteps.cs" />
+    <Compile Include="StepDefinitions\UserManagementSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Features\HookUp.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>HookUp.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\UserManagement.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UserManagement.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
