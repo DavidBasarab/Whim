@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Whim.Models;
+using Whim.Presentation.Infrastructure;
 
 namespace Whim.Presentation
 {
-    public class BasicUserAdministration
+    public class BasicUserAdministration : IDoBasicUserAdministration
     {
         private static readonly Lazy<BasicUserAdministration> instance = new Lazy<BasicUserAdministration>(() => new BasicUserAdministration());
 

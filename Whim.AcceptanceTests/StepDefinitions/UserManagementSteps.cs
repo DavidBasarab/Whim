@@ -3,12 +3,18 @@ using FluentAssertions;
 using TechTalk.SpecFlow;
 using Whim.Models;
 using Whim.Presentation;
+using Whim.Presentation.Infrastructure;
 
 namespace Whim.AcceptanceTests.StepDefinitions
 {
     [Binding]
     public class UserManagementSteps
     {
+        public IDoBasicUserAdministration UserAdministration
+        {
+            get { return BasicUserAdministration.Instance; }
+        }
+
         private string FirstName { get; set; }
         private string LastName { get; set; }
 
@@ -33,13 +39,13 @@ namespace Whim.AcceptanceTests.StepDefinitions
                 LastName = LastName
             };
 
-            BasicUserAdministration.Instance.CreateUser(user);
+            UserAdministration.CreateUser(user);
         }
 
         [When(@"I enter the user into the system")]
         public void WhenIEnterTheUserIntoTheSystem()
         {
-            var users = BasicUserAdministration.Instance.GetAllUsers();
+            var users = UserAdministration.GetAllUsers();
 
             var foundUser = users
                     .FirstOrDefault(i => i.FirstName == FirstName && i.LastName == LastName);

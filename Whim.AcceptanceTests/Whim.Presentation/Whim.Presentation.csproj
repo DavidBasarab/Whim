@@ -43,6 +43,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Whim.Presentation.Infrastructure\Whim.Presentation.Infrastructure.csproj">
+      <Project>{E19D8612-35D9-4A34-9BE0-22BDF764048A}</Project>
+      <Name>Whim.Presentation.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Whim.Features.Infrastructure\Whim.Features.Infrastructure.csproj">
       <Project>{8DE1D565-B8EF-449A-8C79-393631DA5173}</Project>
       <Name>Whim.Features.Infrastructure</Name>
