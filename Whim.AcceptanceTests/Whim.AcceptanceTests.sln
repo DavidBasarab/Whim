@@ -10,6 +10,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E88C2C
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.Features.UserManagement", "..\Whim.Features.UserManagement\Whim.Features.UserManagement.csproj", "{2AADA3FE-353C-42BB-85DE-A9CFC681CA13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.Presentation", "Whim.Presentation\Whim.Presentation.csproj", "{BB21CFF3-3624-4961-BEB3-74EF88EC14E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.Features.Infrastructure", "Whim.Features.Infrastructure\Whim.Features.Infrastructure.csproj", "{8DE1D565-B8EF-449A-8C79-393631DA5173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whim.Models", "Whim.Models\Whim.Models.csproj", "{30070BC0-D639-49EC-9B10-25C6A79D56F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +28,22 @@ Global
 		{B8FD7DCE-1282-4B5E-B44E-1895BEABA371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8FD7DCE-1282-4B5E-B44E-1895BEABA371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8FD7DCE-1282-4B5E-B44E-1895BEABA371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AADA3FE-353C-42BB-85DE-A9CFC681CA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AADA3FE-353C-42BB-85DE-A9CFC681CA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AADA3FE-353C-42BB-85DE-A9CFC681CA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AADA3FE-353C-42BB-85DE-A9CFC681CA13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB21CFF3-3624-4961-BEB3-74EF88EC14E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB21CFF3-3624-4961-BEB3-74EF88EC14E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB21CFF3-3624-4961-BEB3-74EF88EC14E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB21CFF3-3624-4961-BEB3-74EF88EC14E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE1D565-B8EF-449A-8C79-393631DA5173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE1D565-B8EF-449A-8C79-393631DA5173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE1D565-B8EF-449A-8C79-393631DA5173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE1D565-B8EF-449A-8C79-393631DA5173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30070BC0-D639-49EC-9B10-25C6A79D56F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30070BC0-D639-49EC-9B10-25C6A79D56F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30070BC0-D639-49EC-9B10-25C6A79D56F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30070BC0-D639-49EC-9B10-25C6A79D56F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

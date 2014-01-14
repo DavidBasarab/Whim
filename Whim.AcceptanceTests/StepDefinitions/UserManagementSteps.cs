@@ -1,4 +1,8 @@
-﻿using TechTalk.SpecFlow;
+﻿using System.Linq;
+using FluentAssertions;
+using TechTalk.SpecFlow;
+using Whim.Models;
+using Whim.Presentation;
 
 namespace Whim.AcceptanceTests.StepDefinitions
 {
@@ -23,13 +27,24 @@ namespace Whim.AcceptanceTests.StepDefinitions
         [Then(@"the user is created")]
         public void ThenTheUserIsCreated()
         {
-            ScenarioContext.Current.Pending();
+            var user = new User()
+            {
+                FirstName = FirstName,
+                LastName = LastName
+            };
+
+            BasicUserAdministration.Instance.CreateUser(user);
         }
 
         [When(@"I enter the user into the system")]
         public void WhenIEnterTheUserIntoTheSystem()
         {
-            ScenarioContext.Current.Pending();
+            var users = BasicUserAdministration.Instance.GetAllUsers();
+
+            var foundUser = users
+                    .FirstOrDefault(i => i.FirstName == FirstName && i.LastName == LastName);
+
+            foundUser.Should().NotBeNull();
         }
     }
 }
