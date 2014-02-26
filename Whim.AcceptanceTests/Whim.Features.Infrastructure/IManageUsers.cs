@@ -5,5 +5,7 @@ namespace Whim.Features.Infrastructure
     public interface IManageUsers
     {
         void Create(User user);
+
+        void Delete(User user);
     }
 }

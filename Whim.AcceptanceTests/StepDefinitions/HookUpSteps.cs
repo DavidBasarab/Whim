@@ -8,7 +8,7 @@ namespace Whim.AcceptanceTests.StepDefinitions
         [Given(@"I need to hook up to testing")]
         public void GivenINeedToHookUpToTesting() {}
 
-        [Then(@"I am hooked up and pass")]
+        [Then(@"I am hooked up")]
         public void ThenIAmHookedUpAndPass() {}
 
         [When(@"I run a test")]

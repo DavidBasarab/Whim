@@ -39,7 +39,7 @@ namespace Whim.Features.Storeage
             return string.IsNullOrWhiteSpace(json) ? new List<User>() : JsonConvert.DeserializeObject<List<User>>(json);
         }
 
-        private void SaveList(IList<User> users)
+        private static void SaveList(IList<User> users)
         {
             var json = JsonConvert.SerializeObject(users);
 

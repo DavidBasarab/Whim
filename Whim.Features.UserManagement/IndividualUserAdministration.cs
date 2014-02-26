@@ -10,5 +10,10 @@ namespace Whim.Features.UserManagement
         {
             throw new NotImplementedException();
         }
+
+        public void Delete(User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

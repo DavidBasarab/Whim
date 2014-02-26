@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Whim.Features.Infrastructure;
 using Whim.Models;
 using Whim.Presentation.Infrastructure;
 
@@ -15,11 +16,29 @@ namespace Whim.Presentation
             get { return instance.Value; }
         }
 
-        private BasicUserAdministration() {}
+        public IManageUsers ManageUsers { get; set; }
+
+        public BasicUserAdministration() {}
 
         public void CreateUser(User user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ProcessCreateUser(user);
+            }
+            catch (Exception ex)
+            {
+                HandelException(ex);
+            }
+        }
+
+        private void HandelException(Exception exception)
+        {
+        }
+
+        private void ProcessCreateUser(User user)
+        {
+            ManageUsers.Create(user);
         }
 
         public IList<User> GetAllUsers()

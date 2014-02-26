@@ -33,6 +33,9 @@
     <Reference Include="FluentAssertions">
       <HintPath>..\Whim.AcceptanceTests\packages\FluentAssertions.2.2.0.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\Whim.AcceptanceTests\packages\Moq.4.2.1312.1622\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\Whim.AcceptanceTests\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -50,6 +53,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Whim.AcceptanceTests\Whim.Features.Infrastructure\Whim.Features.Infrastructure.csproj">
+      <Project>{8DE1D565-B8EF-449A-8C79-393631DA5173}</Project>
+      <Name>Whim.Features.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Whim.AcceptanceTests\Whim.Models\Whim.Models.csproj">
+      <Project>{30070BC0-D639-49EC-9B10-25C6A79D56F3}</Project>
+      <Name>Whim.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Whim.AcceptanceTests\Whim.Presentation\Whim.Presentation.csproj">
+      <Project>{BB21CFF3-3624-4961-BEB3-74EF88EC14E4}</Project>
+      <Name>Whim.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Whim.Presentation.Infrastructure\Whim.Presentation.Infrastructure.csproj">
+      <Project>{E19D8612-35D9-4A34-9BE0-22BDF764048A}</Project>
+      <Name>Whim.Presentation.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
