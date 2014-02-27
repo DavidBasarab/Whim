@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.ServiceModel.Web;
@@ -9,11 +8,19 @@ namespace ServiceLayer
 {
     public static class DataInformation
     {
-        public const string IMAGE_DIRECTORY = @"D:\Source\Whim\FedEx\Images\";
+        private static void GetTheImageBytes()
+        {
+            ImageBytes = new List<byte[]>();
 
-        public static IList<string> ImageNames { get; set; }
+            foreach(var imageName in ImageNames)
+                ImageBytes.Add(File.ReadAllBytes(IMAGE_DIRECTORY + imageName));
+        }
+
+        //public const string IMAGE_DIRECTORY = @"D:\Source\Whim\FedEx\Images\";
+        public const string IMAGE_DIRECTORY = @"C:\Code\gitHub\Whim\FedEx\CineRest\TheService\SampleImages\";
 
         public static IList<byte[]> ImageBytes { get; set; }
+        public static IList<string> ImageNames { get; set; }
 
         static DataInformation()
         {
@@ -28,20 +35,15 @@ namespace ServiceLayer
 
             GetTheImageBytes();
         }
-
-        private static void GetTheImageBytes()
-        {
-            ImageBytes = new List<byte[]>();
-
-            foreach(var imageName in ImageNames)
-            {
-                ImageBytes.Add(File.ReadAllBytes(IMAGE_DIRECTORY + imageName));
-            }
-        }
     }
 
     public class CineRestService : ICineRestService
     {
+        private static int imageId(string id)
+        {
+            return id.ToInt().Clamp(DataInformation.ImageNames.Count - 1, 0);
+        }
+
         public Stream FindImage(string id)
         {
             SetContentToImage();
@@ -51,9 +53,12 @@ namespace ServiceLayer
             return imageStream;
         }
 
-        private static int imageId(string id)
+        public void SetContentToImage()
         {
-            return id.ToInt().Clamp(DataInformation.ImageNames.Count - 1, 0);
+            if (WebOperationContext.Current == null)
+                return;
+
+            WebOperationContext.Current.OutgoingResponse.Headers[HttpResponseHeader.ContentType] = "image/jpeg";
         }
 
         public void SetContentToJson()
@@ -63,14 +68,6 @@ namespace ServiceLayer
 
             WebOperationContext.Current.OutgoingResponse.Headers[HttpResponseHeader.ContentType] = "application/json";
             WebOperationContext.Current.OutgoingResponse.Format = WebMessageFormat.Json;
-        }
-
-        public void SetContentToImage()
-        {
-            if (WebOperationContext.Current == null)
-                return;
-
-            WebOperationContext.Current.OutgoingResponse.Headers[HttpResponseHeader.ContentType] = "image/jpeg";
         }
 
         public Stream Test(string value)
