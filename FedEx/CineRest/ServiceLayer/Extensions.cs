@@ -20,6 +20,12 @@ namespace ServiceLayer
             return reader.ReadToEnd();
         }
 
+        /// <summary>
+        /// Example
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static int ToInt(this string value, int? defaultValue = null)
         {
             if (!defaultValue.HasValue)

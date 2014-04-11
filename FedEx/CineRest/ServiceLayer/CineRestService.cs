@@ -39,7 +39,7 @@ namespace ServiceLayer
 
     public class CineRestService : ICineRestService
     {
-        private static int imageId(string id)
+        private static int CreateTheImageId(string id)
         {
             return id.ToInt().Clamp(DataInformation.ImageNames.Count - 1, 0);
         }
@@ -48,7 +48,7 @@ namespace ServiceLayer
         {
             SetContentToImage();
 
-            var imageStream = new MemoryStream(DataInformation.ImageBytes[imageId(id)]);
+            var imageStream = new MemoryStream(DataInformation.ImageBytes[CreateTheImageId(id)]);
 
             return imageStream;
         }
